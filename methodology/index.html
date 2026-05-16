@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology — Xenia</title>
+    <meta name="description" content="Methodology for Xenia, a hotel data aggregator.">
+    <link rel="canonical" href="https://xeniadata.com/methodology/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #FAFAF7;
+            --ink: #111111;
+            --ink-soft: #555555;
+            --ink-faint: #999999;
+            --rule: #E5E5E0;
+            --accent: #2D5A3D;
+        }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                         Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 32px 48px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav.topnav {
+            margin-bottom: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--rule);
+        }
+        nav.topnav .wordmark {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            text-decoration: none;
+        }
+        nav.topnav .pagelink {
+            font-size: 13px;
+            color: var(--ink-faint);
+            text-decoration: none;
+        }
+        nav.topnav .pagelink:hover {
+            color: var(--ink);
+        }
+        main { flex: 1; }
+        main h1 {
+            font-size: 36px;
+            line-height: 1.15;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--ink);
+        }
+        main h2 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 40px 0 12px;
+            color: var(--ink);
+        }
+        main h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 28px 0 8px;
+            color: var(--ink);
+        }
+        main h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 20px 0 6px;
+            color: var(--ink-soft);
+        }
+        main p { margin-bottom: 14px; color: var(--ink-soft); }
+        main ul, main ol { margin: 0 0 16px 22px; color: var(--ink-soft); }
+        main li { margin-bottom: 6px; }
+        main a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(45,90,61,0.25); }
+        main a:hover { border-bottom-color: var(--accent); }
+        main code {
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 13px;
+            background: #F0EFE9;
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+        main pre {
+            background: #F0EFE9;
+            padding: 14px 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+        main blockquote {
+            border-left: 3px solid var(--rule);
+            padding-left: 16px;
+            color: var(--ink-faint);
+            font-style: italic;
+            margin: 14px 0;
+        }
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 14px 0 22px;
+            font-size: 14px;
+        }
+        main th, main td {
+            border: 1px solid var(--rule);
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        main th {
+            background: #F0EFE9;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        main hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 32px 0;
+        }
+        main strong { color: var(--ink); }
+        .page-meta {
+            font-size: 13px;
+            color: var(--ink-faint);
+            margin-bottom: 32px;
+        }
+        footer {
+            margin-top: 80px;
+            padding-top: 28px;
+            border-top: 1px solid var(--rule);
+            font-size: 13px;
+            color: var(--ink-faint);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+        footer a { color: var(--ink-faint); text-decoration: none; }
+        footer a:hover { color: var(--ink); }
+        @media (max-width: 600px) {
+            .container { padding: 32px 22px; }
+            main h1 { font-size: 28px; }
+            main h2 { font-size: 19px; }
+            main table { font-size: 13px; }
+            footer { flex-direction: column; }
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav class="topnav">
+            <a class="wordmark" href="/">Xenia</a>
+            <a class="pagelink" href="/">&larr; Home</a>
+        </nav>
+
+        <main>
+<h1>Xenia Methodology</h1>
+<p><strong>Page URL:</strong> <code>https://xeniadata.com/methodology</code>
+<strong>Page version:</strong> v1 skeleton (Day 1 draft, 2026-05-13)
+<strong>Audience:</strong> Property owners, users, attorneys, partners, advisors
+<strong>Required by:</strong> Xenia Legal Framework v1.2 Sections 11.4 (output memorization monitoring), 11.7 (model provenance), 12.2.4 (methodology disclosure), 6.4 (right-to-respond)
+<strong>California AB 2013:</strong> Sections 6 and 7 below satisfy the Generative AI Training Data Transparency Act, effective Jan. 1, 2026</p>
+<hr />
+<h2>1. Plain-English summary</h2>
+<p>Xenia helps travelers find independent and boutique hotels by combining three kinds of information:</p>
+<ol>
+<li><strong>Verified facts</strong> about each property (address, room count, amenities) that come from multiple independent sources and that we can confirm.</li>
+<li><strong>What the property says about itself</strong> — the hotel's own descriptions, claims, and characterizations, always shown as attributed claims, never as Xenia facts.</li>
+<li><strong>Xenia insights</strong> — patterns and inferences our analytical systems derive from many lawful inputs (review aggregates, structured public data, geographic context). These are clearly labeled as Xenia-derived and come with disclosure of how we built them.</li>
+</ol>
+<p>This page explains how each kind of information is gathered, validated, and displayed. It also explains how a property owner can dispute any Xenia insight about their property and what to do if you believe a Xenia output is inaccurate.</p>
+<h2>2. The three-tier attribute classification</h2>
+<p>Every data point about a property on Xenia falls into exactly one of three tiers:</p>
+<h3>Tier 1 — Verified Fact</h3>
+<p>Objective, measurable, externally verifiable attributes (e.g., the property's name, street address, room count, official star rating from an authoritative body, presence of a pool).</p>
+<ul>
+<li><strong>Sourcing standard:</strong> Cross-validated across ≥3 independent sources OR sourced from a licensed authoritative feed.</li>
+<li><strong>Display standard:</strong> May be displayed as an unqualified statement of fact.</li>
+<li><strong>Examples:</strong> "The property has 36 guest rooms." "The property is located at 40128 Lakeview Drive."</li>
+</ul>
+<h3>Tier 2 — Self-Reported Attribute</h3>
+<p>Claims made by the property itself about itself.</p>
+<ul>
+<li><strong>Sourcing standard:</strong> Sourced from the hotel's own website, the hotel's authenticated submission via the Xenia onboarding portal, or other channels controlled by the property owner.</li>
+<li><strong>Display standard:</strong> MUST be attributed to the property. Language like "the property describes itself as..." or "the hotel states it offers..." is used. Never presented as an unqualified fact.</li>
+<li><strong>Examples:</strong> "The property describes itself as 'a boutique mountain retreat.'" "The hotel states that breakfast is included."</li>
+</ul>
+<h3>Tier 3 — Derived Attribute (Xenia inference)</h3>
+<p>Insights generated by Xenia's analytical systems from patterns in underlying lawful data.</p>
+<ul>
+<li><strong>Sourcing standard:</strong> Generated by Xenia's classification systems from a documented input set. Each derived attribute records its input sources, minimum signal threshold, contradicting-signal check, confidence score, model version, and CMI inheritance metadata.</li>
+<li><strong>Display standard:</strong> MUST be presented as a Xenia-derived classification, accompanied by signal count and confidence. Never presented as an unqualified fact.</li>
+<li><strong>Examples:</strong> "Xenia insight: Sound quality score 6.2/10. Derived from 247 review signals across 4 sources over 18 months. Confidence: 84%."</li>
+</ul>
+<h2>3. Where our data comes from</h2>
+<h3>Permitted source categories</h3>
+<ul>
+<li><strong>Licensed APIs:</strong> Cloudbeds (for properties under management), Google Places API (where licensed), Walk Score API, NOAA Weather.</li>
+<li><strong>Owner-supplied:</strong> Property owner's authenticated submission via Xenia's onboarding portal, with documented license grant.</li>
+<li><strong>Public, logged-out web pages:</strong> The property's own website, public government records (ADA compliance, fire code, health department), public regulatory filings.</li>
+<li><strong>Open data:</strong> OpenStreetMap (ODbL), Wikidata (CC0), Schema.org structured data published by property websites.</li>
+<li><strong>Xenia's own first-party data:</strong> Reviews and signals submitted by booked guests with explicit license grants under Xenia's Terms of Service.</li>
+</ul>
+<h3>Prohibited sources</h3>
+<ul>
+<li>Anything behind a login wall (extranet, partner-only portal, members-only forum)</li>
+<li>Anything behind a paywall</li>
+<li>Pirate libraries and shadow archives</li>
+<li>Sources that have issued cease-and-desist to Xenia</li>
+<li>Sources that require defeating anti-bot controls to access</li>
+<li>Personal data of identifiable individuals (guest names, employee personal data)</li>
+</ul>
+<h3>How we choose between sources for the same fact</h3>
+<p>Where multiple lawful sources offer the same fact, Xenia preferences (in order): (1) the property's authenticated submission, (2) a licensed authoritative feed, (3) cross-validation of ≥3 independent public sources. Where sources disagree, the field is held for property attestation rather than published with an arbitrary winner.</p>
+<h2>4. How we generate Xenia insights (Tier 3)</h2>
+<p>Each Xenia insight is the output of a documented inference methodology with the following characteristics:</p>
+<ul>
+<li><strong>Input data sources</strong> are recorded for every insight, including their lawful-acquisition status.</li>
+<li><strong>Signal aggregation</strong> is statistical, not text-reproductive. We do not store, display, or republish verbatim review text. We aggregate review signals into counts, percentages, scores, and named themes.</li>
+<li><strong>Cross-source diversity</strong> is required. Xenia insights are never derived from a single source's content; they are derived from multiple lawful inputs so that no single source's market is substituted (see <em>Thomson Reuters v. Ross Intelligence</em>).</li>
+<li><strong>Confidence scoring</strong> accompanies every insight. Confidence is computed from signal count, source diversity, signal consistency, and recency.</li>
+<li><strong>Contradicting-signal check</strong> must pass before an insight is published. Where signals contradict, the insight is withheld pending property attestation or additional signals.</li>
+<li><strong>Memorization testing</strong> (Xenia Legal Framework v1.2 Section 11.4) is run on every inference model before production use. We sample ≥1,000 random inputs, run the model, and verify no output reproduces ≥15 consecutive words from any single input. Results are logged.</li>
+<li><strong>Quarterly re-test</strong> of memorization on every production model.</li>
+<li><strong>Model provenance</strong> is documented for every model used: name, version, vendor or training source.</li>
+</ul>
+<h2>5. How Xenia displays negative-framed information</h2>
+<p>Where a Xenia insight could be perceived as unfavorable to a property (e.g., a complaint-pattern derivation, a hidden-fee surprise factor), Xenia uses one or more of five permitted framings:</p>
+<ol>
+<li><strong>Aggregate-only reporting.</strong> Statistics about the underlying dataset, not assertions about the property. "Sound concerns mentioned in 32% of reviews mentioning sound."</li>
+<li><strong>Statistic-before-adjective.</strong> The number leads; any descriptor is derivative. "Cleanliness score: 7.1/10 (Good)."</li>
+<li><strong>Source-of-source linking.</strong> Where applicable, Xenia links to the platform where the underlying signals originated rather than republishing them.</li>
+<li><strong>Methodology disclosure.</strong> Every Xenia insight is accompanied by a link to this methodology page. The claim becomes "Xenia's model produced inference X with this confidence" — a true statement about the inference, not a factual claim about the property.</li>
+<li><strong>Property right-to-respond.</strong> Every property has a mechanism to dispute any Xenia insight, see the methodology, submit counter-evidence, and have the insight flagged or revised. See Section 8 below.</li>
+</ol>
+<p>The following framings are <strong>never</strong> used by Xenia regardless of disclaimer:</p>
+<ul>
+<li>Discrete factual assertions about a named property based on review aggregation. We never say "this hotel has thin walls."</li>
+<li>Comparative ranking statements that disparage one property by elevating another.</li>
+<li>Verbatim quotation of negative review text.</li>
+<li>Published claims about individual identifiable staff members.</li>
+</ul>
+<h2>6. AI training and inference disclosure (California AB 2013 compliance)</h2>
+<p>Effective January 1, 2026, California Assembly Bill 2013 requires generative AI systems made available to California residents to publish a high-level summary of training datasets. The following is Xenia's disclosure:</p>
+<h3>6.1 Datasets used to train or develop Xenia's inference models</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset / source family</th>
+<th>Owner</th>
+<th>Purpose</th>
+<th>Copyrighted material included?</th>
+<th>License status</th>
+<th>Time period</th>
+<th>Approximate size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(To be completed before Scope C — Xenia's first-party guest reviews)</td>
+<td>Xenia (under Xenia ToS)</td>
+<td>Tier 3 inference training</td>
+<td>No third-party copyrighted material</td>
+<td>Xenia ToS license grant from booked guests</td>
+<td>2026-05-13 onward</td>
+<td>Building incrementally</td>
+</tr>
+<tr>
+<td>(To be completed before Scope C — Hotel-owner attestations)</td>
+<td>Xenia (under owner-submission license)</td>
+<td>Tier 2 attribution display</td>
+<td>No third-party copyrighted material</td>
+<td>Owner license grant</td>
+<td>2026-05-13 onward</td>
+<td>Building incrementally</td>
+</tr>
+<tr>
+<td>(To be completed before Scope C — Public-domain government records, OSM, Wikidata)</td>
+<td>Various governmental and open-data providers</td>
+<td>Tier 1 fact validation</td>
+<td>Public-domain or open-license only (CC0, CC BY-SA, ODbL)</td>
+<td>Public domain or open license</td>
+<td>Varies by source</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td>(Additional rows added as production sources are documented and licensed)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 Update cadence</h3>
+<p>This disclosure is reviewed quarterly and republished annually. Material changes (a new training data source added, a model retrained on a new dataset, etc.) trigger an out-of-cycle update.</p>
+<h3>6.3 What Xenia does NOT use for training</h3>
+<ul>
+<li>Verbatim review text scraped from third-party platforms (Booking, TripAdvisor, Yelp, Expedia, etc.)</li>
+<li>Any content from a pirate library or shadow archive</li>
+<li>Content obtained by defeating any access control</li>
+<li>Personal data of identifiable individuals</li>
+</ul>
+<h2>7. FTC Consumer Review Rule compliance (16 CFR Part 465)</h2>
+<p>Effective October 21, 2024, the FTC's Consumer Review and Testimonials Rule prohibits certain practices around consumer reviews. Xenia complies as follows:</p>
+<ul>
+<li><strong>No fake reviews.</strong> Xenia does not generate, commission, or display reviews that misrepresent the reviewer or the reviewed experience.</li>
+<li><strong>No suppression of legitimate negative reviews.</strong> Xenia's property right-to-respond mechanism is a process for dispute resolution and attribution, not a mechanism for suppression. Properties may not require Xenia to remove a Xenia insight as a condition of doing business with Xenia. Any contractual provision purporting to require Xenia to suppress lawful negative content is unenforceable and will be ignored.</li>
+<li><strong>Disclosure of material connections.</strong> Where a property has a material connection to Xenia (e.g., owner submission, partnership), the connection is disclosed alongside any property-supplied content.</li>
+</ul>
+<h2>8. Property right-to-respond mechanism</h2>
+<p>Every property covered by a Xenia derived attribute (Tier 3) has access to a property dashboard at <code>https://xeniadata.com/property/[property_id]/manage</code> (live in Scope B onward). The dashboard:</p>
+<ul>
+<li>Displays every Xenia insight published about the property</li>
+<li>Shows the methodology and signal sources for each insight</li>
+<li>Allows the property to submit a dispute or counter-evidence</li>
+<li>Tracks the dispute through a documented workflow with response within 10 business days</li>
+</ul>
+<p>Unresolved disputes cause the disputed insight to be flagged on the public listing pending review. See the Right-to-Respond protocol (linked below).</p>
+<p>For Scope A (internal MVP, Cedarwood properties only): no Tier 3 inferences are published; the right-to-respond mechanism is staged for Scope B onward.</p>
+<h2>9. Memorization testing and output filters</h2>
+<p>For every Tier 3 inference model in production:</p>
+<ul>
+<li>Pre-production memorization test: 1,000 random inputs sampled; outputs scanned for verbatim or near-verbatim reproduction; threshold ≥15 consecutive words from any input triggers retraining or filter application.</li>
+<li>Production output filter: N-gram match against input sources, edit-distance check, sentence-structure similarity check. Outputs that exceed thresholds are blocked from publication.</li>
+<li>Quarterly re-test of memorization on production models.</li>
+<li>Incident logging per Xenia Legal Framework v1.2 Section 7.1.3.</li>
+</ul>
+<h2>10. Audit and governance</h2>
+<ul>
+<li><strong>Source access logs:</strong> Every URL or API endpoint we access is logged, with timestamp, user-agent, response code.</li>
+<li><strong>Data lineage logs:</strong> Every published data point traces to its sources, parsers, validation methods, and CMI metadata.</li>
+<li><strong>Compliance check logs:</strong> Every data action is preceded by a nine-question compliance check (Xenia Legal Framework v1.2 Section 8.1).</li>
+<li><strong>Cease-and-desist logs:</strong> All requests to cease access are honored and retained for 7 years.</li>
+<li><strong>Lawful acquisition logs:</strong> Documented basis for each source's lawful-acquisition status, retained for the lifetime of any derived data plus 7 years.</li>
+</ul>
+<h2>11. Independent review</h2>
+<p>Xenia's compliance framework was prepared in collaboration with research-driven legal analysis (IP, media-defamation, insurance, and engineering domains). It has not yet been signed off by a California-licensed attorney. Counsel sign-off is scheduled for the pre-commercial-launch phase. The framework is published openly to allow scrutiny and improvement.</p>
+<h2>12. Plain-English contacts</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I'm a property owner and want to dispute a Xenia insight</td>
+<td><a href="mailto:dispute@xeniadata.com">dispute@xeniadata.com</a></td>
+</tr>
+<tr>
+<td>I'm a user and the information about a property is wrong</td>
+<td><a href="mailto:feedback@xeniadata.com">feedback@xeniadata.com</a></td>
+</tr>
+<tr>
+<td>I'm a webmaster and want to control Xenia's crawl on my domain</td>
+<td><a href="mailto:crawler@xeniadata.com">crawler@xeniadata.com</a></td>
+</tr>
+<tr>
+<td>I'm filing a DMCA copyright notice</td>
+<td><a href="mailto:dmca@xeniadata.com">dmca@xeniadata.com</a></td>
+</tr>
+<tr>
+<td>I'm a journalist or attorney with a methodology question</td>
+<td><a href="mailto:press@xeniadata.com">press@xeniadata.com</a></td>
+</tr>
+</tbody>
+</table>
+<h2>13. Skeleton status</h2>
+<p>This is a Day 1 skeleton draft. Sections marked "(To be completed before Scope C...)" will be populated as production sources are documented, licenses confirmed, and the right-to-respond mechanism reaches Scope B operational status. The methodology page becomes fully populated before any commercial public publication.</p>
+<h2>Last updated</h2>
+<p>2026-05-13.</p>
+        </main>
+
+        <footer>
+            <div>&copy; 2026 Xenia Data. All rights reserved.</div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/methodology/">Methodology</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+                <a href="/dmca/">DMCA</a>
+                <a href="/crawler/">Crawler</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler Information — Xenia</title>
+    <meta name="description" content="Crawler Information for Xenia, a hotel data aggregator.">
+    <link rel="canonical" href="https://xeniadata.com/crawler/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #FAFAF7;
+            --ink: #111111;
+            --ink-soft: #555555;
+            --ink-faint: #999999;
+            --rule: #E5E5E0;
+            --accent: #2D5A3D;
+        }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                         Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 56px 32px 48px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav.topnav {
+            margin-bottom: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--rule);
+        }
+        nav.topnav .wordmark {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            text-decoration: none;
+        }
+        nav.topnav .pagelink {
+            font-size: 13px;
+            color: var(--ink-faint);
+            text-decoration: none;
+        }
+        nav.topnav .pagelink:hover {
+            color: var(--ink);
+        }
+        main { flex: 1; }
+        main h1 {
+            font-size: 36px;
+            line-height: 1.15;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--ink);
+        }
+        main h2 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 40px 0 12px;
+            color: var(--ink);
+        }
+        main h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 28px 0 8px;
+            color: var(--ink);
+        }
+        main h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 20px 0 6px;
+            color: var(--ink-soft);
+        }
+        main p { margin-bottom: 14px; color: var(--ink-soft); }
+        main ul, main ol { margin: 0 0 16px 22px; color: var(--ink-soft); }
+        main li { margin-bottom: 6px; }
+        main a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(45,90,61,0.25); }
+        main a:hover { border-bottom-color: var(--accent); }
+        main code {
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 13px;
+            background: #F0EFE9;
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+        main pre {
+            background: #F0EFE9;
+            padding: 14px 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+        main blockquote {
+            border-left: 3px solid var(--rule);
+            padding-left: 16px;
+            color: var(--ink-faint);
+            font-style: italic;
+            margin: 14px 0;
+        }
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 14px 0 22px;
+            font-size: 14px;
+        }
+        main th, main td {
+            border: 1px solid var(--rule);
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        main th {
+            background: #F0EFE9;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        main hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 32px 0;
+        }
+        main strong { color: var(--ink); }
+        .page-meta {
+            font-size: 13px;
+            color: var(--ink-faint);
+            margin-bottom: 32px;
+        }
+        footer {
+            margin-top: 80px;
+            padding-top: 28px;
+            border-top: 1px solid var(--rule);
+            font-size: 13px;
+            color: var(--ink-faint);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+        footer a { color: var(--ink-faint); text-decoration: none; }
+        footer a:hover { color: var(--ink); }
+        @media (max-width: 600px) {
+            .container { padding: 32px 22px; }
+            main h1 { font-size: 28px; }
+            main h2 { font-size: 19px; }
+            main table { font-size: 13px; }
+            footer { flex-direction: column; }
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav class="topnav">
+            <a class="wordmark" href="/">Xenia</a>
+            <a class="pagelink" href="/">&larr; Home</a>
+        </nav>
+
+        <main>
+<h1>Xenia Crawler Information</h1>
+<p><strong>Page URL:</strong> <code>https://xeniadata.com/crawler</code>
+<strong>Page version:</strong> v1 (Day 1 draft, 2026-05-13)
+<strong>Audience:</strong> Webmasters, site operators, ToS reviewers, opposing counsel
+<strong>Required by:</strong> Xenia Legal Framework v1.2 Section 4.4.2</p>
+<hr />
+<h2>What Xenia is</h2>
+<p>Xenia is a hotel data aggregator operated by Xenia Data . We build a structured, fact-only index of public hotel information to help travelers find independent and boutique properties that match their needs. We are NOT a re-publisher of third-party reviews, descriptions, or photographs.</p>
+<h2>How Xenia's automated systems operate</h2>
+<p>Xenia's automated data-collection systems are designed as a Transient Observation Architecture (TOA). The legal anchor is the <em>Authors Guild v. Google</em> / <em>Field v. Google</em> / <em>hiQ Labs v. LinkedIn</em> / <em>Meta v. Bright Data</em> line of cases. The technical and operational characteristics:</p>
+<ul>
+<li><strong>We do NOT bypass authentication.</strong> Our crawlers never attempt to log in, never use real user credentials, never accept Terms of Service through any clickwrap, and never set session cookies. If a page requires login, our crawlers stop.</li>
+<li><strong>We do NOT defeat anti-bot controls.</strong> We never solve CAPTCHAs, rotate IPs to evade rate limits, spoof browser fingerprints, or misrepresent the nature of our requests.</li>
+<li><strong>We do NOT store source HTML.</strong> Our crawlers fetch a public page, extract structured factual data into our schema, and discard the source response. We do not maintain a copy of the source material beyond the transient processing window.</li>
+<li><strong>We obey <code>robots.txt</code>.</strong> Every fetch begins with a <code>robots.txt</code> check. We respect <code>Disallow</code>, <code>Crawl-delay</code>, <code>noindex</code>, and <code>noarchive</code> directives.</li>
+<li><strong>We rate-limit politely.</strong> Default: 1 request per source domain every 2 seconds, with jitter, and a maximum of 1 concurrent connection per domain.</li>
+<li><strong>We honor <code>429</code>, <code>403</code>, and cease-and-desist responses immediately.</strong> Backoff is automatic; we do not retry through alternative IPs or identities.</li>
+</ul>
+<h2>Our identifying user-agent</h2>
+<p>All Xenia automated fetches identify themselves with the following user-agent string:</p>
+<pre><code>Xenia-Crawler/1.0 (+https://xeniadata.com/crawler)
+</code></pre>
+<p>If you see traffic from this user-agent, it is us. If you see traffic claiming to be us but from a different IP range than those listed below, please report it to <a href="mailto:abuse@xeniadata.com">abuse@xeniadata.com</a> — that traffic is impersonation, not Xenia.</p>
+<h2>IP ranges used by Xenia</h2>
+<p>Current IP ranges from which Xenia originates automated requests:</p>
+<table>
+<thead>
+<tr>
+<th>CIDR range</th>
+<th>Provider</th>
+<th>Effective date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(To be populated upon Day 7 Cloudflare Workers deployment)</td>
+<td>Cloudflare</td>
+<td>2026-05-19 (target)</td>
+</tr>
+</tbody>
+</table>
+<p>This table is updated whenever our infrastructure changes. The current canonical machine-readable form is at: <code>https://xeniadata.com/crawler/ip-ranges.json</code> (live at deployment).</p>
+<h2>Contact for opt-out, cease-and-desist, or rate limiting</h2>
+<p>If you wish to:
+- Opt your domain out of Xenia's automated observation entirely,
+- Request a custom crawl rate (e.g., once per week instead of once per day),
+- Issue a cease-and-desist for one or more URLs or paths,
+- Report suspected impersonation of the Xenia user-agent,</p>
+<p>please email:</p>
+<p><strong><a href="mailto:crawler@xeniadata.com">crawler@xeniadata.com</a></strong></p>
+<p>We commit to acknowledging your request <strong>within 2 business days</strong> and to honoring it <strong>within 7 business days</strong>. We log every opt-out request to a permanent record and we do not retry domains we have been asked to stop crawling.</p>
+<p>For copyright takedown notices (DMCA), see our <a href="https://xeniadata.com/dmca">DMCA designated agent page</a> instead.</p>
+<h2>What we collect</h2>
+<p>Xenia collects facts from public web pages. Examples:</p>
+<ul>
+<li>The hotel's name, address, geographic coordinates, phone number</li>
+<li>Star or class rating where assigned by an official body (AAA, Forbes, Michelin, government)</li>
+<li>Amenity presence (pool, gym, restaurant, parking, Wi-Fi)</li>
+<li>Check-in / check-out times where publicly stated</li>
+<li>Pet policy, smoking policy, family policy where publicly stated</li>
+</ul>
+<p>We also use licensed APIs (Cloudbeds for properties under management, Google Places API where licensed) and we collect first-party data through our own onboarding flow with explicit license grants from property owners.</p>
+<h2>What we do NOT collect</h2>
+<ul>
+<li>Verbatim review text from any source</li>
+<li>Verbatim hotel descriptions, marketing copy, or editorial content</li>
+<li>Professional photographs sourced from third parties without documented license</li>
+<li>Personal data of identifiable individuals (guest names, employee personal information beyond a publicly listed work contact)</li>
+<li>Content gated behind authentication, paywall, or any access control</li>
+<li>Any source material from a pirate library or shadow archive</li>
+</ul>
+<h2>Our compliance posture</h2>
+<p>Xenia's full compliance framework is published at <a href="https://xeniadata.com/methodology">https://xeniadata.com/methodology</a> and includes:</p>
+<ul>
+<li>Three-tier attribute classification (Verified Fact / Self-Reported / Xenia-Derived Inference)</li>
+<li>Display language conventions for derived inferences</li>
+<li>Property right-to-respond mechanism for any Xenia-derived claim about a property</li>
+<li>Memorization testing for AI-derived outputs</li>
+<li>Audit logging of every data action with immutable retention</li>
+</ul>
+<p>A copyright agent is designated with the U.S. Copyright Office per DMCA § 512. See <a href="https://xeniadata.com/dmca">https://xeniadata.com/dmca</a>.</p>
+<h2>Last updated</h2>
+<p>2026-05-13. Material changes to this page will be announced at least 7 days in advance to any party that has subscribed to crawler-information updates </p>
+        </main>
+
+        <footer>
+            <div>&copy; 2026 Xenia Data. All rights reserved.</div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/methodology/">Methodology</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+                <a href="/dmca/">DMCA</a>
+                <a href="/crawler/">Crawler</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
