@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /methodology/
+Disallow: /methodology
 
 Sitemap: https://xeniadata.com/sitemap.xml
