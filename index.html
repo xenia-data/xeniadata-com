@@ -3,210 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xenia — Hotel data, structured.</title>
-    <meta name="description" content="Xenia is building the data layer for the global hotel industry.">
+    <title>Xenia</title>
+    <meta name="description" content="Xenia.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Xenia — Hotel data, structured.">
-    <meta property="og:description" content="Xenia is building the data layer for the global hotel industry.">
+    <meta property="og:title" content="Xenia">
+    <meta property="og:description" content="Xenia.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xeniadata.com">
+    <meta name="theme-color" content="#0A1628">
     <link rel="canonical" href="https://xeniadata.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #FAFAF7;
-            --ink: #111111;
-            --ink-soft: #555555;
-            --ink-faint: #999999;
-            --rule: #E5E5E0;
-            --accent: #2D5A3D;
+            --bg: #0A1628;
+            --bg-deep: #050B14;
+            --accent: #2EC597;
+            --ink: #FFFFFF;
+            --ink-soft: #94A3B8;
+            --ink-faint: rgba(255, 255, 255, 0.35);
+            --rule: rgba(255, 255, 255, 0.07);
         }
 
-        html, body {
-            height: 100%;
-        }
+        html, body { height: 100%; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
                          Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
+            background:
+                radial-gradient(ellipse 80% 60% at center 45%, var(--bg) 0%, var(--bg-deep) 100%);
             color: var(--ink);
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 80px 32px 48px;
+        .page {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-        }
-
-        header {
-            margin-bottom: 96px;
-        }
-
-        .wordmark {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--ink);
+            padding: 40px 32px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         main {
             flex: 1;
-        }
-
-        h1 {
-            font-size: 44px;
-            line-height: 1.1;
-            font-weight: 600;
-            letter-spacing: -0.025em;
-            margin-bottom: 24px;
-            color: var(--ink);
-        }
-
-        .lede {
-            font-size: 20px;
-            line-height: 1.45;
-            color: var(--ink-soft);
-            margin-bottom: 40px;
-            max-width: 540px;
-        }
-
-        .status {
-            display: inline-flex;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--ink-faint);
-            padding: 6px 12px;
-            border: 1px solid var(--rule);
-            border-radius: 999px;
-            margin-bottom: 32px;
+            justify-content: center;
+            text-align: center;
+            padding: 32px 0;
         }
 
-        .status::before {
-            content: "";
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-
-        .contact {
-            margin-top: 56px;
-            padding-top: 32px;
-            border-top: 1px solid var(--rule);
-        }
-
-        .contact-label {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--ink-faint);
-            margin-bottom: 8px;
-        }
-
-        .contact a {
+        .wordmark {
+            font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+            font-weight: 500;
+            font-size: clamp(72px, 14vw, 168px);
+            letter-spacing: 0.14em;
             color: var(--ink);
-            text-decoration: none;
-            border-bottom: 1px solid var(--rule);
-            transition: border-color 0.15s ease;
+            line-height: 1;
+            margin: 0;
+            padding-left: 0.14em;
+            user-select: none;
         }
 
-        .contact a:hover {
-            border-bottom-color: var(--ink);
+        .rule {
+            width: clamp(140px, 20vw, 240px);
+            height: 2px;
+            background: var(--accent);
+            margin: 36px auto 32px;
+            border: none;
+            box-shadow: 0 0 24px rgba(46, 197, 151, 0.4);
+        }
+
+        .greek {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(22px, 2.6vw, 30px);
+            letter-spacing: 0.04em;
+            color: var(--accent);
+            opacity: 0.9;
         }
 
         footer {
-            margin-top: 96px;
-            padding-top: 32px;
+            margin-top: 64px;
+            padding-top: 28px;
             border-top: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 24px;
             font-size: 13px;
-            color: var(--ink-faint);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        footer nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            letter-spacing: 0.02em;
+            color: var(--ink-soft);
         }
 
         footer a {
-            color: var(--ink-faint);
+            color: var(--ink-soft);
             text-decoration: none;
-            transition: color 0.15s ease;
+            transition: color 0.2s ease;
         }
 
         footer a:hover {
             color: var(--ink);
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 48px 24px 32px;
-            }
-            header {
-                margin-bottom: 64px;
-            }
-            h1 {
-                font-size: 34px;
-            }
-            .lede {
-                font-size: 18px;
-            }
+        footer nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-link {
+            color: var(--ink);
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 1px;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .copyright {
+            color: var(--ink-faint);
+            justify-self: end;
+        }
+
+        @media (max-width: 720px) {
+            .page { padding: 28px 22px; }
             footer {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 16px;
+                text-align: center;
             }
+            .copyright { justify-self: center; }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .wordmark, .rule, .greek {
+                opacity: 0;
+                animation: fade-in 1.2s ease-out forwards;
+            }
+            .rule { animation-delay: 0.3s; }
+            .greek { animation-delay: 0.6s; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0);   }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="wordmark">Xenia</div>
-        </header>
-
+    <div class="page">
         <main>
-            <div class="status">Coming soon</div>
-            <h1>Hotel data, structured.</h1>
-            <p class="lede">
-                We're building the data layer for the global hotel industry —
-                authoritative property facts, attributed self-reports, and
-                fair-use inferences, all sourced and audited.
-            </p>
-
-            <div class="contact">
-                <div class="contact-label">Get in touch</div>
-                <a href="mailto:hello@xeniadata.com">hello@xeniadata.com</a>
-            </div>
+            <h1 class="wordmark">XENIA</h1>
+            <hr class="rule" aria-hidden="true">
+            <p class="greek" lang="el" title="xenía">ξενία</p>
         </main>
-
         <footer>
-            <div>&copy; 2026 Xenia. All rights reserved.</div>
-            <nav>
-                <a href="/methodology">Methodology</a>
-                <a href="/privacy">Privacy</a>
-                <a href="/terms">Terms</a>
-                <a href="/dmca">DMCA</a>
-                <a href="/crawler">Crawler</a>
-            </nav>
-        </footer>
-    </div>
-</body>
-</html>
+            <a class="contact-link" href="mailto:hello@xeniadata.com">hello@xeniadata.com</a>
+            <nav aria-label="Legal">
+                <a href="/methodology/">Methodology</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+                <a href="/dmca/">DMCA</a>
+                <a href="/crawler/">Crawler</a>
+  
