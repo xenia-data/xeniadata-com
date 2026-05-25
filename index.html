@@ -1,88 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xenia</title>
-    <meta name="description" content="Xenia.">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Xenia">
-    <meta property="og:description" content="Xenia.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xeniadata.com">
-    <meta name="theme-color" content="#0A1628">
-    <link rel="canonical" href="https://xeniadata.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg: #0A1628;
-            --bg-deep: #050B14;
-            --accent: #2EC597;
-            --ink: #FFFFFF;
-            --ink-soft: #94A3B8;
-            --ink-faint: rgba(255, 255, 255, 0.35);
-            --rule: rgba(255, 255, 255, 0.07);
-        }
-        html, body { height: 100%; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: radial-gradient(ellipse 80% 60% at center 45%, var(--bg) 0%, var(--bg-deep) 100%);
-            color: var(--ink); font-size: 16px; line-height: 1.5;
-            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-        .page { min-height: 100vh; display: flex; flex-direction: column; padding: 40px 32px; max-width: 1200px; margin: 0 auto; }
-        main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 0; }
-        .wordmark {
-            font-family: "Cormorant Garamond", "Times New Roman", Georgia, serif;
-            font-weight: 500; font-size: clamp(72px, 14vw, 168px); letter-spacing: 0.14em;
-            color: var(--ink); line-height: 1; margin: 0; padding-left: 0.14em; user-select: none;
-        }
-        .rule { width: clamp(140px, 20vw, 240px); height: 2px; background: var(--accent); margin: 36px auto 32px; border: none; box-shadow: 0 0 24px rgba(46, 197, 151, 0.4); }
-        .greek { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); letter-spacing: 0.04em; color: var(--accent); opacity: 0.9; }
-        footer { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; font-size: 13px; letter-spacing: 0.02em; color: var(--ink-soft); }
-        footer a { color: var(--ink-soft); text-decoration: none; transition: color 0.2s ease; }
-        footer a:hover { color: var(--ink); }
-        footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .contact-link { color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 1px; transition: border-color 0.2s ease, color 0.2s ease; }
-        .contact-link:hover { border-color: var(--accent); color: var(--accent); }
-        .copyright { color: var(--ink-faint); justify-self: end; }
-        @media (max-width: 720px) {
-            .page { padding: 28px 22px; }
-            footer { grid-template-columns: 1fr; justify-items: center; gap: 16px; text-align: center; }
-            .copyright { justify-self: center; }
-        }
-        @media (prefers-reduced-motion: no-preference) {
-            .wordmark, .rule, .greek { opacity: 0; animation: fade-in 1.2s ease-out forwards; }
-            .rule { animation-delay: 0.3s; }
-            .greek { animation-delay: 0.6s; }
-        }
-        @keyframes fade-in {
-            from { opacity: 0; transform: translateY(8px); }
-            to   { opacity: 1; transform: translateY(0);   }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xenia — Structured Hotel Data for AI Platforms</title>
+<meta name="description" content="Xenia provides high-fidelity structured hotel data to AI platforms, travel intelligence companies, and large hospitality operators. Partnership inquiries welcome.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://xeniadata.com/">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;line-height:1.6;color:#111827;margin:0;background:#fafafa}
+.container{max-width:960px;margin:0 auto;padding:0 1.5rem}
+header{padding:2.5rem 0 1rem;border-bottom:1px solid #e5e7eb;background:#fff}
+.logo{font-size:1.75rem;font-weight:800;letter-spacing:-0.02em;color:#0a1628}
+.logo-mark{display:inline-block;width:.5rem;height:.5rem;background:#d4a843;border-radius:50%;margin-right:.5rem;vertical-align:middle}
+nav{margin-top:.75rem;font-size:.875rem}
+nav a{color:#4b5563;text-decoration:none;margin-right:1.25rem}
+nav a:hover{color:#0a1628}
+.hero{padding:4rem 0 3rem;background:#fff;border-bottom:1px solid #e5e7eb}
+.hero h1{font-size:2.5rem;font-weight:800;color:#0a1628;letter-spacing:-0.02em;margin:0 0 1rem;line-height:1.2}
+.hero .lede{font-size:1.25rem;color:#374151;max-width:640px;margin:0 0 2rem;line-height:1.5}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.875rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:.9375rem;transition:all .15s}
+.btn-primary{background:#0a1628;color:#fff;border:1px solid #0a1628}
+.btn-primary:hover{background:#1e2a44;border-color:#1e2a44}
+.btn-secondary{background:#fff;color:#0a1628;border:1px solid #d1d5db}
+.btn-secondary:hover{background:#f3f4f6;border-color:#9ca3af}
+section{padding:3.5rem 0}
+section h2{font-size:1.5rem;font-weight:700;color:#0a1628;margin:0 0 1.5rem;letter-spacing:-0.01em}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.feature{background:#fff;padding:1.5rem;border-radius:8px;border:1px solid #e5e7eb}
+.feature h3{font-size:1rem;font-weight:700;color:#0a1628;margin:0 0 .5rem;letter-spacing:-0.01em}
+.feature p{font-size:.9375rem;color:#4b5563;margin:0;line-height:1.5}
+.feature-icon{width:2rem;height:2rem;background:#fef3c7;color:#d4a843;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:.75rem;font-size:.875rem}
+.status-banner{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:1.25rem 1.5rem;margin:0 0 2rem}
+.status-banner h3{color:#92400e;font-size:1rem;font-weight:700;margin:0 0 .25rem}
+.status-banner p{color:#78350f;font-size:.9375rem;margin:0}
+.who-block{background:#fff;padding:2rem;border-radius:8px;border:1px solid #e5e7eb;margin-top:1rem}
+.who-block h3{font-size:1rem;font-weight:700;color:#0a1628;margin:0 0 .75rem}
+.who-block ul{margin:0;padding-left:1.25rem;color:#374151}
+.who-block li{margin-bottom:.375rem}
+.contact-block{background:#0a1628;color:#fff;padding:3rem;border-radius:8px;text-align:center;margin:2rem 0}
+.contact-block h2{color:#fff;font-size:1.5rem;margin:0 0 .5rem}
+.contact-block p{color:#cfd5dd;font-size:1rem;margin:0 0 1.5rem;max-width:520px;margin-left:auto;margin-right:auto}
+.contact-block .btn-primary{background:#d4a843;color:#0a1628;border-color:#d4a843}
+.contact-block .btn-primary:hover{background:#e2bb5d;border-color:#e2bb5d}
+.contact-block .secondary-link{display:block;margin-top:1rem;font-size:.875rem;color:#cfd5dd}
+.contact-block .secondary-link a{color:#d4a843;text-decoration:none}
+footer{padding:2.5rem 0;border-top:1px solid #e5e7eb;background:#fff;margin-top:2rem}
+footer p{font-size:.8125rem;color:#6b7280;margin:.25rem 0}
+footer a{color:#374151;text-decoration:none;margin-right:1rem}
+footer a:hover{color:#0a1628}
+.fineprint{font-size:.75rem;color:#9ca3af;margin-top:1.5rem}
+@media (max-width:640px){
+  .hero h1{font-size:1.875rem}
+  .hero .lede{font-size:1.0625rem}
+  .contact-block{padding:2rem 1.5rem}
+}
+</style>
 </head>
 <body>
-    <div class="page">
-        <main>
-            <h1 class="wordmark">XENIA</h1>
-            <hr class="rule" aria-hidden="true">
-            <p class="greek" lang="el" title="xenía">ξενία</p>
-        </main>
-        <footer>
-            <a class="contact-link" href="mailto:hello@xeniadata.com">hello@xeniadata.com</a>
-            <nav aria-label="Legal">
-                <a href="/privacy/">Privacy</a>
-                <a href="/terms/">Terms</a>
-                <a href="/dmca/">DMCA</a>
-                <a href="/crawler/">Crawler</a>
-            </nav>
-            <span class="copyright">&copy; 2026 Xenia.</span>
-        </footer>
-    </div>
+<header>
+<div class="container">
+<div class="logo"><span class="logo-mark"></span>Xenia</div>
+<nav>
+<a href="/methodology">Methodology</a>
+<a href="/#partnership">Partnership inquiries</a>
+<a href="/terms">Terms</a>
+<a href="/privacy">Privacy</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Structured hotel data for the AI era.</h1>
+<p class="lede">Xenia delivers high-fidelity, license-clean hotel intelligence to AI platforms, travel partners, and hospitality operators — with per-fact source provenance baked in.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="#partnership">Request partnership access</a>
+<a class="btn btn-secondary" href="/methodology">How we build the data</a>
+</div>
+</div>
+</section>
+
+<section style="padding-top:2rem">
+<div class="container">
+<div class="status-banner">
+<h3>Early access opening June 2026</h3>
+<p>We're completing final data validation across our initial market. Partner conversations are open now for select AI platforms and travel intelligence companies. <a href="#partnership" style="color:#92400e;font-weight:600">Reserve a preview demo →</a></p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Built for AI consumption</h2>
+<div class="feature-grid">
+<div class="feature">
+<div class="feature-icon">P</div>
+<h3>Per-fact provenance</h3>
+<p>Every attribute, claim, and detail in the dataset carries its source. AI platforms cite Xenia data because the lineage is verifiable.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">T</div>
+<h3>Tiered confidence</h3>
+<p>Facts are tagged validated, probable, or hotel-attested. Derived inferences are flagged separately. AI partners know exactly what they're consuming.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">L</div>
+<h3>License-clean sourcing</h3>
+<p>Built only on public-data sources operating under permissive terms. No paywalled review text, no scraped reservation systems, no liability inheritance.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">D</div>
+<h3>Independent hotels first</h3>
+<p>Where chain-data providers stop, Xenia begins. Coverage focused on the long tail of independent properties that travelers want and AI platforms can't otherwise find.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Who we work with</h2>
+<div class="who-block">
+<h3>AI platforms and assistants</h3>
+<ul>
+<li>Conversational AI systems that need to answer hotel-discovery and recommendation queries with verifiable structured data</li>
+<li>Retrieval-augmented generation (RAG) systems requiring license-clean hospitality content</li>
+<li>Travel-focused vertical AI applications</li>
+</ul>
+</div>
+<div class="who-block">
+<h3>Travel intelligence companies</h3>
+<ul>
+<li>Hospitality data aggregators expanding into independent-property coverage</li>
+<li>Booking and discovery platforms requiring structured property profiles</li>
+<li>Market intelligence firms tracking the independent hotel segment</li>
+</ul>
+</div>
+<div class="who-block">
+<h3>Independent hotel operators</h3>
+<ul>
+<li>Hotel owners and managers who want to claim, correct, and enrich their Xenia profile</li>
+<li>Property management groups seeking to improve AI-discoverability of their portfolio</li>
+<li>Independent properties tired of being invisible in chain-dominated discovery surfaces</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="partnership">
+<div class="container">
+<div class="contact-block">
+<h2>Start a partnership conversation</h2>
+<p>If you're building an AI platform, travel intelligence product, or operating an independent property, we'd like to talk. Access details are shared under mutual confidentiality.</p>
+<a class="btn btn-primary" href="mailto:partnerships@xeniadata.com?subject=Xenia%20partnership%20inquiry">partnerships@xeniadata.com</a>
+<span class="secondary-link">Hotel operators: <a href="mailto:hotels@xeniadata.com?subject=Hotel%20listing%20inquiry">hotels@xeniadata.com</a></span>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p style="font-weight:600;color:#0a1628">© 2026 Xenia, Inc.</p>
+<p>
+<a href="/methodology">Methodology</a>
+<a href="/terms">Terms of Service</a>
+<a href="/privacy">Privacy Policy</a>
+<a href="/dmca">DMCA</a>
+<a href="mailto:partnerships@xeniadata.com">Partnerships</a>
+</p>
+<p class="fineprint">Xenia and the Xenia logo are trademarks of Xenia, Inc. Methodology, data schema, and source registry are proprietary and shared with qualifying partners under mutual non-disclosure agreement.</p>
+</div>
+</footer>
 </body>
 </html>
