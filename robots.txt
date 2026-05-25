@@ -1,6 +1,40 @@
+# Xenia, Inc. robots.txt
+# https://xeniadata.com
+
 User-agent: *
 Allow: /
-Disallow: /methodology/
-Disallow: /methodology
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
 
 Sitemap: https://xeniadata.com/sitemap.xml
+
+# Note: Xenia's structured hotel data is NOT exposed on this public website.
+# Access is provided to AI platforms and travel partners via authenticated channels
+# under partnership agreement. Contact partnerships@xeniadata.com for access.
