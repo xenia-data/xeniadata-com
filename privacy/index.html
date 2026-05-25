@@ -1,449 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Xenia</title>
-    <meta name="description" content="Privacy Policy for Xenia, a hotel data aggregator.">
-    <link rel="canonical" href="https://xeniadata.com/privacy/">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg: #FAFAF7;
-            --ink: #111111;
-            --ink-soft: #555555;
-            --ink-faint: #999999;
-            --rule: #E5E5E0;
-            --accent: #2D5A3D;
-        }
-        html, body { height: 100%; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
-                         Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            font-size: 16px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 56px 32px 48px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        nav.topnav {
-            margin-bottom: 56px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--rule);
-        }
-        nav.topnav .wordmark {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--ink);
-            text-decoration: none;
-        }
-        nav.topnav .pagelink {
-            font-size: 13px;
-            color: var(--ink-faint);
-            text-decoration: none;
-        }
-        nav.topnav .pagelink:hover {
-            color: var(--ink);
-        }
-        main { flex: 1; }
-        main h1 {
-            font-size: 36px;
-            line-height: 1.15;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            color: var(--ink);
-        }
-        main h2 {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 40px 0 12px;
-            color: var(--ink);
-        }
-        main h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin: 28px 0 8px;
-            color: var(--ink);
-        }
-        main h4 {
-            font-size: 15px;
-            font-weight: 600;
-            margin: 20px 0 6px;
-            color: var(--ink-soft);
-        }
-        main p { margin-bottom: 14px; color: var(--ink-soft); }
-        main ul, main ol { margin: 0 0 16px 22px; color: var(--ink-soft); }
-        main li { margin-bottom: 6px; }
-        main a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(45,90,61,0.25); }
-        main a:hover { border-bottom-color: var(--accent); }
-        main code {
-            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-            font-size: 13px;
-            background: #F0EFE9;
-            padding: 1px 5px;
-            border-radius: 3px;
-        }
-        main pre {
-            background: #F0EFE9;
-            padding: 14px 16px;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin-bottom: 16px;
-            font-size: 13px;
-        }
-        main blockquote {
-            border-left: 3px solid var(--rule);
-            padding-left: 16px;
-            color: var(--ink-faint);
-            font-style: italic;
-            margin: 14px 0;
-        }
-        main table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 14px 0 22px;
-            font-size: 14px;
-        }
-        main th, main td {
-            border: 1px solid var(--rule);
-            padding: 8px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        main th {
-            background: #F0EFE9;
-            font-weight: 600;
-            color: var(--ink);
-        }
-        main hr {
-            border: none;
-            border-top: 1px solid var(--rule);
-            margin: 32px 0;
-        }
-        main strong { color: var(--ink); }
-        .page-meta {
-            font-size: 13px;
-            color: var(--ink-faint);
-            margin-bottom: 32px;
-        }
-        footer {
-            margin-top: 80px;
-            padding-top: 28px;
-            border-top: 1px solid var(--rule);
-            font-size: 13px;
-            color: var(--ink-faint);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 16px;
-        }
-        footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
-        footer a { color: var(--ink-faint); text-decoration: none; }
-        footer a:hover { color: var(--ink); }
-        @media (max-width: 600px) {
-            .container { padding: 32px 22px; }
-            main h1 { font-size: 28px; }
-            main h2 { font-size: 19px; }
-            main table { font-size: 13px; }
-            footer { flex-direction: column; }
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Xenia</title>
+<meta name="description" content="Xenia, Inc. privacy policy covering data we collect, how we use it, and your rights under CCPA, CPRA, and GDPR.">
+<link rel="canonical" href="https://xeniadata.com/privacy">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:#111827;margin:0;background:#fafafa}
+.container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+header{padding:2rem 0 1rem;border-bottom:1px solid #e5e7eb;background:#fff}
+.logo{font-size:1.5rem;font-weight:800;color:#0a1628}
+.logo-mark{display:inline-block;width:.45rem;height:.45rem;background:#d4a843;border-radius:50%;margin-right:.45rem;vertical-align:middle}
+nav{margin-top:.5rem;font-size:.875rem}
+nav a{color:#4b5563;text-decoration:none;margin-right:1rem}
+.crumb{padding:1rem 0;font-size:.875rem;color:#6b7280}
+.crumb a{color:#0a1628;text-decoration:none}
+main{padding:1rem 0 3rem;background:#fff;border-radius:8px;border:1px solid #e5e7eb;margin:1rem 0}
+main .inner{padding:2rem}
+h1{font-size:1.75rem;font-weight:800;color:#0a1628;margin:0 0 .5rem}
+.subtitle{color:#6b7280;font-size:.9375rem;margin:0 0 2rem}
+h2{font-size:1.125rem;font-weight:700;color:#0a1628;margin:1.75rem 0 .5rem}
+p{margin:0 0 .75rem;color:#374151}
+ul{color:#374151;margin:0 0 1rem;padding-left:1.5rem}
+li{margin-bottom:.25rem}
+footer{padding:2rem 0;font-size:.8125rem;color:#6b7280;border-top:1px solid #e5e7eb;background:#fff}
+footer a{color:#374151;text-decoration:none;margin-right:1rem}
+.notice{background:#fef3c7;border:1px solid #fde68a;border-radius:6px;padding:.875rem 1rem;font-size:.875rem;color:#78350f;margin:1rem 0}
 </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="topnav">
-            <a class="wordmark" href="/">Xenia</a>
-            <a class="pagelink" href="/">&larr; Home</a>
-        </nav>
+<header>
+<div class="container">
+<a href="/" style="text-decoration:none;color:inherit"><div class="logo"><span class="logo-mark"></span>Xenia</div></a>
+<nav>
+<a href="/">Home</a>
+<a href="/methodology">Methodology</a>
+<a href="/#partnership">Partnerships</a>
+</nav>
+</div>
+</header>
 
-        <main>
-<h1>Xenia Privacy Policy (v1)</h1>
-<p><strong>Page URL:</strong> <code>https://xeniadata.com/privacy</code>
-<strong>Page version:</strong> v1 (Day 1 draft, 2026-05-13)
-<strong>Effective date:</strong> Upon Scope A internal MVP launch (target: 2026-05-19)
-<strong>Applies to:</strong> All users of xeniadata.com and related Xenia services</p>
-<hr />
+<div class="container">
+<div class="crumb"><a href="/">Xenia</a> / Privacy Policy</div>
+<main><div class="inner">
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Effective: May 29, 2026 · Last updated: May 2026</p>
+
+<div class="notice"><strong>Draft pending legal review.</strong> This privacy policy is operational for the public marketing site as of launch. A revised version with full counsel sign-off will replace this document in the coming weeks. No material data-handling practices will change without notice on this page.</div>
+
 <h2>1. Who we are</h2>
-<p>Xenia is operated by Xenia Data  ("Xenia," "we," "us," or "our"), with its principal place of business at 4438 Ingraham St, PMB 216, San Diego, CA 92109. For privacy-related questions, contact us at <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a>.</p>
-<h2>2. Scope of this policy</h2>
-<p>This Privacy Policy describes how Xenia collects, uses, shares, and protects personal information of users of the Xenia service ("you"). It applies to all features of Xenia (xeniadata.com, internal.xeniadata.com, partner portal, public website, and any future apps or APIs).</p>
-<p>It does NOT apply to information about properties that Xenia aggregates as part of its core data product. Property information (room counts, amenities, locations, etc.) is governed by Xenia's Terms of Service and the Methodology page.</p>
-<h2>3. Information we collect</h2>
-<h3>3.1 Information you provide directly</h3>
-<ul>
-<li><strong>Account information.</strong> Email address, name, account password (hashed), authentication factors.</li>
-<li><strong>Property owner information.</strong> If you submit on behalf of a property: your name, contact email, the property's identity, your authority to represent the property.</li>
-<li><strong>Submitted content.</strong> Reviews, attestations, photographs, dispute submissions, and any content you submit through the Service. (Note: submitted content is governed by the Terms of Service license grant — see Section 6.1 of the Terms.)</li>
-<li><strong>Communications.</strong> Emails, support requests, dispute correspondence.</li>
-</ul>
-<h3>3.2 Information collected automatically</h3>
-<ul>
-<li><strong>Usage data.</strong> Pages viewed, queries made, features used, timestamps.</li>
-<li><strong>Technical data.</strong> IP address, browser type, device type, operating system, referring URL.</li>
-<li><strong>Cookies and similar.</strong> Session cookies (for authentication), preference cookies (for UI settings), and limited analytics cookies. We do not use third-party advertising cookies. See Section 8 for cookie details.</li>
-<li><strong>Audit log entries.</strong> Every data action on the Service is logged for compliance and security purposes; logs include user identifier and timestamp where applicable.</li>
-</ul>
-<h3>3.3 Information from third parties</h3>
-<ul>
-<li><strong>Property data sources.</strong> Information about properties from licensed APIs (Cloudbeds, Google Places, Walk Score, etc.), public web pages, government records, and other sources described in the Methodology page. This is property data, not personal data about you.</li>
-<li><strong>Verification data.</strong> For guest review submissions, we may verify booking confirmations through the property's property management system (e.g., Cloudbeds) to confirm you stayed at the property.</li>
-</ul>
-<h2>4. How we use your information</h2>
-<p>We use personal information for the following purposes:</p>
-<table>
-<thead>
-<tr>
-<th>Purpose</th>
-<th>Legal basis (where required)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>To provide and maintain the Service</td>
-<td>Contract (performance of these Terms)</td>
-</tr>
-<tr>
-<td>To authenticate you and secure your account</td>
-<td>Contract / Legitimate interest</td>
-</tr>
-<tr>
-<td>To process and respond to your submissions and inquiries</td>
-<td>Contract</td>
-</tr>
-<tr>
-<td>To verify your stay before publishing a guest review</td>
-<td>Legitimate interest in review integrity</td>
-</tr>
-<tr>
-<td>To improve the Service through analytics</td>
-<td>Legitimate interest</td>
-</tr>
-<tr>
-<td>To send service announcements and important updates</td>
-<td>Legitimate interest</td>
-</tr>
-<tr>
-<td>To send optional marketing communications (only with your consent)</td>
-<td>Consent</td>
-</tr>
-<tr>
-<td>To detect, investigate, and prevent fraud, abuse, and security incidents</td>
-<td>Legitimate interest / Legal obligation</td>
-</tr>
-<tr>
-<td>To comply with legal obligations and respond to lawful requests</td>
-<td>Legal obligation</td>
-</tr>
-<tr>
-<td>To enforce our Terms of Service</td>
-<td>Legitimate interest / Contract</td>
-</tr>
-</tbody>
-</table>
-<p>We do NOT use your personal information to train AI models that generate content about you specifically, except where you have submitted content under the explicit license grant in Section 6.1 of the Terms.</p>
-<h2>5. How we share your information</h2>
-<p>We share personal information only as described below:</p>
-<h3>5.1 Service providers</h3>
-<p>We share information with vendors and contractors who process data on our behalf and under contract to assist with Service operation (e.g., hosting, email delivery, authentication). All service providers are bound by confidentiality and data-protection obligations. Current service providers include:</p>
-<ul>
-<li><strong>Cloudflare</strong> (hosting, edge compute, R2 object storage, D1 database, email transport)</li>
-<li><strong>DMCA agent registration</strong> with the U.S. Copyright Office (publicly listed contact information only)</li>
-<li>Additional service providers will be listed here as they are engaged</li>
-</ul>
-<h3>5.2 Property owners (limited circumstances)</h3>
-<p>If you submit a review of a property where you stayed, the property may see the review and the verified-stay confirmation. We do not share your full account profile with the property; we share only the review content and the stay verification.</p>
-<h3>5.3 Aggregate and anonymized data</h3>
-<p>We may share aggregate and anonymized statistics about Service usage (e.g., "Xenia served X million property page views in Q1") with partners, in marketing materials, and publicly. Aggregate data does not identify any individual.</p>
-<h3>5.4 Legal obligations</h3>
-<p>We may disclose personal information to comply with applicable law, regulation, legal process, or government request; to enforce our Terms; to protect the rights, property, or safety of Xenia, our users, or others; or in connection with a merger, acquisition, or sale of assets (with continuing privacy protections).</p>
-<h3>5.5 No sale or sharing for cross-context behavioral advertising</h3>
-<p>Xenia does NOT sell personal information. Xenia does NOT share personal information for cross-context behavioral advertising. For California residents, these terms have specific meanings under the California Privacy Rights Act — see Section 9.</p>
-<h2>6. Data retention</h2>
-<table>
-<thead>
-<tr>
-<th>Data category</th>
-<th>Retention</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Account information</td>
-<td>Lifetime of the account + 12 months</td>
-</tr>
-<tr>
-<td>Submitted content (reviews, attestations)</td>
-<td>Lifetime of the underlying derivative use + 7 years (Section 11 lawful-acquisition log)</td>
-</tr>
-<tr>
-<td>Usage data</td>
-<td>12 months</td>
-</tr>
-<tr>
-<td>Audit log entries</td>
-<td>24 months (per Xenia Legal Framework Section 7.2)</td>
-</tr>
-<tr>
-<td>DMCA notice / takedown logs</td>
-<td>7 years</td>
-</tr>
-<tr>
-<td>Communications</td>
-<td>24 months unless ongoing</td>
-</tr>
-<tr>
-<td>Cookies</td>
-<td>Per cookie type (see Section 8)</td>
-</tr>
-</tbody>
-</table>
-<p>Where required by law, we may retain information longer (e.g., financial records for tax purposes).</p>
-<h2>7. Security</h2>
-<p>Xenia implements administrative, technical, and physical safeguards to protect personal information against unauthorized access, alteration, disclosure, or destruction. Specific measures include:</p>
-<ul>
-<li>Encryption in transit (TLS 1.2+ for all connections)</li>
-<li>Encryption at rest for sensitive data</li>
-<li>Access controls (role-based, least privilege)</li>
-<li>Audit logging of administrative actions</li>
-<li>Cloudflare-hosted infrastructure with WAF and bot protection</li>
-<li>Regular security review and incident response procedures</li>
-</ul>
-<p>No method of transmission or storage is 100% secure. If you become aware of a security incident affecting your information, contact us immediately at <a href="mailto:security@xeniadata.com">security@xeniadata.com</a>.</p>
-<h2>8. Cookies and similar technologies</h2>
-<p>We use the following categories of cookies:</p>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Purpose</th>
-<th>Duration</th>
-<th>Required?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Strictly necessary</td>
-<td>Authentication, session management, security</td>
-<td>Session or persistent (90 days)</td>
-<td>Yes — cannot be disabled</td>
-</tr>
-<tr>
-<td>Functional</td>
-<td>UI preferences (theme, language)</td>
-<td>1 year</td>
-<td>No — can be disabled</td>
-</tr>
-<tr>
-<td>Analytics</td>
-<td>Aggregate usage analysis</td>
-<td>90 days</td>
-<td>No — can be disabled</td>
-</tr>
-</tbody>
-</table>
-<p>We do NOT use:</p>
-<ul>
-<li>Third-party advertising cookies</li>
-<li>Cross-site tracking pixels</li>
-<li>Behavioral profiling cookies</li>
-</ul>
-<p>You can manage cookie preferences through your browser settings or through the Xenia cookie banner on first visit. Most browsers allow you to block all cookies; doing so may prevent some Service features from working.</p>
-<h2>9. California residents — CCPA / CPRA rights</h2>
-<p>Under the California Consumer Privacy Act and California Privacy Rights Act, California residents have the following rights:</p>
-<h3>9.1 Right to know</h3>
-<p>You have the right to request that we disclose what personal information we have collected, used, disclosed, or sold about you. Specifically, you can request:</p>
-<ul>
-<li>Categories of personal information we have collected</li>
-<li>Categories of sources from which the information was collected</li>
-<li>Business or commercial purpose for collecting the information</li>
-<li>Categories of third parties with whom we share the information</li>
-<li>Specific pieces of personal information we have collected about you</li>
-</ul>
-<h3>9.2 Right to delete</h3>
-<p>You have the right to request that we delete personal information we have collected about you, subject to certain exceptions (e.g., information necessary to complete a transaction, comply with a legal obligation, or detect security incidents).</p>
-<h3>9.3 Right to correct</h3>
-<p>You have the right to request that we correct inaccurate personal information we have about you.</p>
-<h3>9.4 Right to opt out of sale or sharing</h3>
-<p>As stated in Section 5.5, Xenia does NOT sell personal information and does NOT share personal information for cross-context behavioral advertising. There is no opt-out to exercise because there is no sale or sharing in those senses.</p>
-<h3>9.5 Right to limit use of sensitive personal information</h3>
-<p>To the extent Xenia collects "sensitive personal information" as defined under the CPRA, you have the right to limit its use. Xenia's data collection minimizes sensitive personal information; most data we collect about users is not sensitive.</p>
-<h3>9.6 Right to non-discrimination</h3>
-<p>We will not discriminate against you for exercising your CCPA / CPRA rights.</p>
-<h3>9.7 Authorized agents</h3>
-<p>You may authorize an agent to make a request on your behalf by providing the agent with signed written authorization and verifying your identity directly with us.</p>
-<h3>9.8 How to exercise your rights</h3>
-<p>Send a request to <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a> with the subject line "CCPA Request." Include enough information for us to verify your identity (e.g., the email address associated with your account) and the specific right you are exercising. We will respond within 45 days, or 90 days for complex requests (with notice).</p>
-<h2>10. International users</h2>
-<p>Xenia is operated from the United States. If you access the Service from outside the United States, you understand that your information will be transferred to and processed in the United States, where data-protection laws may differ from those in your jurisdiction.</p>
-<p>For users in the European Economic Area, the United Kingdom, or other jurisdictions with data-protection laws comparable to the GDPR: Xenia processes personal information on the legal bases identified in Section 4. You have rights of access, rectification, erasure, restriction, portability, and objection. Contact us at <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a> to exercise these rights. You also have the right to lodge a complaint with your local data-protection authority.</p>
-<p>Currently, Xenia's Scope A and Scope B do not target users outside the United States. If you are accessing Xenia from outside the U.S., note that the Service is intended for U.S. users.</p>
-<h2>11. Children</h2>
-<p>The Service is intended for users 18 and older. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, contact us immediately at <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a> and we will delete the information.</p>
-<p>For users 13–17: the Service is not directed at you. You may not register an account on the Service.</p>
-<h2>12. Changes to this Privacy Policy</h2>
-<p>We may update this Privacy Policy from time to time. Material changes will be announced on the Service at least 30 days in advance of taking effect. The "Last updated" date below indicates the most recent revision.</p>
-<h2>13. Contact</h2>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Email</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Privacy questions and rights requests</td>
-<td><a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Security concerns</td>
-<td><a href="mailto:security@xeniadata.com">security@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Account deletion</td>
-<td><a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>DMCA notices</td>
-<td><a href="mailto:dmca@xeniadata.com">dmca@xeniadata.com</a></td>
-</tr>
-</tbody>
-</table>
-<p>Mailing address:
-Xenia Data
-Attn: Privacy
-4438 Ingraham St, PMB 216
-San Diego, CA 92109</p>
-<h2>Last updated</h2>
-<p>2026-05-13. Version 1 (Day 1 draft). This Privacy Policy has not yet been reviewed by a California-licensed attorney. Counsel review is scheduled before Scope C commercial</p>
-        </main>
+<p>Xenia is a data product operated by Xenia, Inc., a Delaware corporation with principal place of business in San Diego, California. References in this policy to "Xenia," "we," "us," and "our" mean Xenia, Inc.</p>
 
-        <footer>
-            <div>&copy; 2026 Xenia Data. All rights reserved.</div>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/methodology/">Methodology</a>
-                <a href="/privacy/">Privacy</a>
-                <a href="/terms/">Terms</a>
-                <a href="/dmca/">DMCA</a>
-                <a href="/crawler/">Crawler</a>
-            </nav>
-        </footer>
-    </div>
+<h2>2. Scope</h2>
+<p>This policy describes how Xenia handles personal information collected through xeniadata.com (the "Site"), our partnership inquiry process, and any pre-release demonstrations of our hotel data product.</p>
+
+<h2>3. Information we collect</h2>
+<p>Through the Site and partnership inquiry process we collect:</p>
+<ul>
+<li>Contact information you voluntarily provide (name, email address, company name, role)</li>
+<li>The content of inquiries or messages you send us</li>
+<li>Standard web-server logs (IP address, user agent, request timestamps) retained for security and abuse monitoring</li>
+<li>If you opt in to a partnership preview demo, additional business contact information necessary to facilitate the demo</li>
+</ul>
+<p>We do NOT use third-party advertising cookies or cross-site behavioral tracking on the Site.</p>
+
+<h2>4. How we use information</h2>
+<ul>
+<li>To respond to your inquiries and provide requested information</li>
+<li>To evaluate partnership fit and facilitate partner demonstrations</li>
+<li>For internal analytics and product improvement</li>
+<li>To detect and prevent fraud or abuse of the Site</li>
+<li>As required by law</li>
+</ul>
+
+<h2>5. Information we do NOT collect about hotels or guests</h2>
+<p>Our hotel data product aggregates structured facts about properties from public sources. We do NOT collect or include:</p>
+<ul>
+<li>Personally identifiable information about individual hotel guests</li>
+<li>Personally identifiable information about hotel staff (except names of front-of-house staff when publicly attested in published reviews)</li>
+<li>Payment information of any party</li>
+<li>Health, financial, or other sensitive personal data</li>
+</ul>
+
+<h2>6. Sharing of information</h2>
+<p>We do not sell personal information. We do not share contact information from inquiries with third parties except (a) service providers acting on our behalf under written confidentiality, (b) as required by law or legal process, or (c) in connection with a corporate transaction.</p>
+
+<h2>7. Your rights — California (CCPA / CPRA)</h2>
+<p>If you are a California resident, you have the right to: know what personal information we have about you; request deletion; request correction; opt out of sale or sharing (we do not sell or share personal information for cross-context behavioral advertising). To exercise these rights, contact <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a>.</p>
+
+<h2>8. Your rights — European Union (GDPR)</h2>
+<p>If you are in the EU, EEA, or UK, you have rights of access, rectification, erasure, restriction, portability, and objection regarding your personal information. The lawful bases on which we process personal information are: (a) your consent, (b) performance of a contract, and (c) our legitimate interests in operating and improving the Service.</p>
+
+<h2>9. Data retention</h2>
+<p>Inquiry contact information is retained as long as the inquiry remains commercially relevant, after which it is deleted or anonymized. Web-server logs are retained for 90 days.</p>
+
+<h2>10. Security</h2>
+<p>We use commercially reasonable administrative, technical, and physical safeguards to protect personal information. No system is perfectly secure, and we cannot guarantee that unauthorized access will never occur.</p>
+
+<h2>11. Contact</h2>
+<p>Privacy inquiries: <a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a></p>
+<p>General correspondence: Xenia, Inc., 4438 Ingraham St, PMB 216, San Diego, CA 92109</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy. Material changes will be reflected here with a revised "Last updated" date and, when appropriate, additional notice.</p>
+
+</div></main>
+</div>
+
+<footer>
+<div class="container">
+<p style="font-weight:600;color:#0a1628;margin-bottom:.5rem">© 2026 Xenia, Inc.</p>
+<p><a href="/methodology">Methodology</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/dmca">DMCA</a><a href="mailto:partnerships@xeniadata.com">Partnerships</a></p>
+</div>
+</footer>
 </body>
 </html>
