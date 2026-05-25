@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — Xenia</title>
+<meta name="description" content="Xenia's data methodology — public overview. Full technical methodology shared with qualifying partners under NDA.">
+<link rel="canonical" href="https://xeniadata.com/methodology">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:#111827;margin:0;background:#fafafa}
+.container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+header{padding:2rem 0 1rem;border-bottom:1px solid #e5e7eb;background:#fff}
+.logo{font-size:1.5rem;font-weight:800;color:#0a1628}
+.logo-mark{display:inline-block;width:.45rem;height:.45rem;background:#d4a843;border-radius:50%;margin-right:.45rem;vertical-align:middle}
+nav{margin-top:.5rem;font-size:.875rem}
+nav a{color:#4b5563;text-decoration:none;margin-right:1rem}
+.crumb{padding:1rem 0;font-size:.875rem;color:#6b7280}
+.crumb a{color:#0a1628;text-decoration:none}
+main{padding:1rem 0 3rem;background:#fff;border-radius:8px;border:1px solid #e5e7eb;margin:1rem 0}
+main .inner{padding:2rem}
+h1{font-size:2rem;font-weight:800;color:#0a1628;margin:0 0 .75rem;letter-spacing:-0.02em}
+.subtitle{font-size:1.0625rem;color:#4b5563;margin:0 0 2rem}
+h2{font-size:1.25rem;font-weight:700;color:#0a1628;margin:2rem 0 .75rem}
+p{margin:0 0 1rem;color:#374151}
+ul{color:#374151;margin:0 0 1rem;padding-left:1.5rem}
+li{margin-bottom:.375rem}
+.callout{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0}
+.callout h3{color:#92400e;font-size:1rem;margin:0 0 .375rem}
+.callout p{color:#78350f;margin:0;font-size:.9375rem}
+.btn{display:inline-block;padding:.75rem 1.25rem;background:#0a1628;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;font-size:.9375rem;margin-top:.5rem}
+.btn:hover{background:#1e2a44}
+footer{padding:2rem 0;font-size:.8125rem;color:#6b7280;border-top:1px solid #e5e7eb;background:#fff}
+footer a{color:#374151;text-decoration:none;margin-right:1rem}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<a href="/" style="text-decoration:none;color:inherit"><div class="logo"><span class="logo-mark"></span>Xenia</div></a>
+<nav>
+<a href="/">Home</a>
+<a href="/methodology" style="color:#0a1628;font-weight:600">Methodology</a>
+<a href="/#partnership">Partnerships</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="crumb"><a href="/">Xenia</a> / Methodology</div>
+
+<main>
+<div class="inner">
+<h1>How Xenia builds the data</h1>
+<p class="subtitle">A public overview. Full technical methodology is shared with qualifying partners under mutual non-disclosure agreement.</p>
+
+<h2>What this page is</h2>
+<p>This page describes our general approach to building the Xenia hotel dataset. It is intentionally non-specific about exact source registries, classification rules, scoring algorithms, conflict resolution heuristics, and tier-thresholding mechanics. That detail is part of our proprietary methodology and is shared only with API partners and prospective acquirers under written confidentiality.</p>
+
+<h2>Source approach</h2>
+<p>Xenia aggregates structured facts from a registry of public data sources. Sources are reviewed against permissive-use criteria before inclusion. We do not include data from sources whose terms prohibit our use, and we do not scrape paywalled or login-gated platforms. Source-by-source compliance is reviewed quarterly.</p>
+
+<h2>Fact-level provenance</h2>
+<p>Every fact in the Xenia dataset carries:</p>
+<ul>
+<li>A reference to the source it was derived from</li>
+<li>A confidence-tier classification (validated, probable, attested, or inference)</li>
+<li>A confidence score for downstream filtering</li>
+<li>An extraction timestamp</li>
+</ul>
+<p>This provenance is exposed to partners through our query interface — they know exactly what they're consuming and can filter by source or tier as their use case requires.</p>
+
+<h2>Independent classification</h2>
+<p>Xenia classifies properties as independent, chain-affiliated, or branded-collection based on a multi-signal classifier. Chain affiliations and brand relationships are surfaced so partners can include or exclude as they see fit.</p>
+
+<h2>Conflict resolution</h2>
+<p>When multiple sources disagree about a fact, Xenia applies a multi-source resolution method that weighs source quality, recency, and corroboration count. The resolution and the underlying conflicting values are both retained in the dataset.</p>
+
+<h2>Right to respond</h2>
+<p>Listed hotels can claim, correct, supplement, or request removal of their Xenia profile at any time. We confirm authority to act on behalf of a property before processing changes. Response targets: 5 business days for factual correction; 30 days for full delisting.</p>
+
+<h2>What we don't do</h2>
+<ul>
+<li>We do not include verbatim review text from third-party platforms</li>
+<li>We do not include defamatory or unverified negative-framed claims about individuals</li>
+<li>We do not include personally identifiable information about guests or staff</li>
+<li>We do not train a generative AI model on the source data — we use commercial LLMs as a generation tool downstream of our structured pipeline</li>
+</ul>
+
+<div class="callout">
+<h3>Full methodology under NDA</h3>
+<p>If you're evaluating a partnership and need our complete technical methodology, source registry, classification rule set, and scoring system, we share these documents under a mutual non-disclosure agreement.</p>
+<a class="btn" href="mailto:partnerships@xeniadata.com?subject=Methodology%20review%20(NDA)">Request methodology under NDA</a>
+</div>
+
+<h2>Updates to this page</h2>
+<p>This methodology overview is reviewed quarterly. Material changes to our data sources, classification approach, or hotel-rights process will be reflected here and dated.</p>
+<p style="color:#6b7280;font-size:.875rem;margin-top:2rem">Last updated: May 2026</p>
+</div>
+</main>
+</div>
+
+<footer>
+<div class="container">
+<p style="font-weight:600;color:#0a1628;margin-bottom:.5rem">© 2026 Xenia, Inc.</p>
+<p>
+<a href="/methodology">Methodology</a>
+<a href="/terms">Terms</a>
+<a href="/privacy">Privacy</a>
+<a href="/dmca">DMCA</a>
+<a href="mailto:partnerships@xeniadata.com">Partnerships</a>
+</p>
+</div>
+</footer>
+</body>
+</html>
