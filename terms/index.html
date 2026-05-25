@@ -1,373 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service — Xenia</title>
-    <meta name="description" content="Terms of Service for Xenia, a hotel data aggregator.">
-    <link rel="canonical" href="https://xeniadata.com/terms/">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg: #FAFAF7;
-            --ink: #111111;
-            --ink-soft: #555555;
-            --ink-faint: #999999;
-            --rule: #E5E5E0;
-            --accent: #2D5A3D;
-        }
-        html, body { height: 100%; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
-                         Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            font-size: 16px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 56px 32px 48px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        nav.topnav {
-            margin-bottom: 56px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--rule);
-        }
-        nav.topnav .wordmark {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--ink);
-            text-decoration: none;
-        }
-        nav.topnav .pagelink {
-            font-size: 13px;
-            color: var(--ink-faint);
-            text-decoration: none;
-        }
-        nav.topnav .pagelink:hover {
-            color: var(--ink);
-        }
-        main { flex: 1; }
-        main h1 {
-            font-size: 36px;
-            line-height: 1.15;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            color: var(--ink);
-        }
-        main h2 {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 40px 0 12px;
-            color: var(--ink);
-        }
-        main h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin: 28px 0 8px;
-            color: var(--ink);
-        }
-        main h4 {
-            font-size: 15px;
-            font-weight: 600;
-            margin: 20px 0 6px;
-            color: var(--ink-soft);
-        }
-        main p { margin-bottom: 14px; color: var(--ink-soft); }
-        main ul, main ol { margin: 0 0 16px 22px; color: var(--ink-soft); }
-        main li { margin-bottom: 6px; }
-        main a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(45,90,61,0.25); }
-        main a:hover { border-bottom-color: var(--accent); }
-        main code {
-            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-            font-size: 13px;
-            background: #F0EFE9;
-            padding: 1px 5px;
-            border-radius: 3px;
-        }
-        main pre {
-            background: #F0EFE9;
-            padding: 14px 16px;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin-bottom: 16px;
-            font-size: 13px;
-        }
-        main blockquote {
-            border-left: 3px solid var(--rule);
-            padding-left: 16px;
-            color: var(--ink-faint);
-            font-style: italic;
-            margin: 14px 0;
-        }
-        main table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 14px 0 22px;
-            font-size: 14px;
-        }
-        main th, main td {
-            border: 1px solid var(--rule);
-            padding: 8px 12px;
-            text-align: left;
-            vertical-align: top;
-        }
-        main th {
-            background: #F0EFE9;
-            font-weight: 600;
-            color: var(--ink);
-        }
-        main hr {
-            border: none;
-            border-top: 1px solid var(--rule);
-            margin: 32px 0;
-        }
-        main strong { color: var(--ink); }
-        .page-meta {
-            font-size: 13px;
-            color: var(--ink-faint);
-            margin-bottom: 32px;
-        }
-        footer {
-            margin-top: 80px;
-            padding-top: 28px;
-            border-top: 1px solid var(--rule);
-            font-size: 13px;
-            color: var(--ink-faint);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 16px;
-        }
-        footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
-        footer a { color: var(--ink-faint); text-decoration: none; }
-        footer a:hover { color: var(--ink); }
-        @media (max-width: 600px) {
-            .container { padding: 32px 22px; }
-            main h1 { font-size: 28px; }
-            main h2 { font-size: 19px; }
-            main table { font-size: 13px; }
-            footer { flex-direction: column; }
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Xenia</title>
+<meta name="description" content="Xenia, Inc. terms of service for use of xeniadata.com and the Xenia data product.">
+<link rel="canonical" href="https://xeniadata.com/terms">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:#111827;margin:0;background:#fafafa}
+.container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+header{padding:2rem 0 1rem;border-bottom:1px solid #e5e7eb;background:#fff}
+.logo{font-size:1.5rem;font-weight:800;color:#0a1628}
+.logo-mark{display:inline-block;width:.45rem;height:.45rem;background:#d4a843;border-radius:50%;margin-right:.45rem;vertical-align:middle}
+nav{margin-top:.5rem;font-size:.875rem}
+nav a{color:#4b5563;text-decoration:none;margin-right:1rem}
+.crumb{padding:1rem 0;font-size:.875rem;color:#6b7280}
+.crumb a{color:#0a1628;text-decoration:none}
+main{padding:1rem 0 3rem;background:#fff;border-radius:8px;border:1px solid #e5e7eb;margin:1rem 0}
+main .inner{padding:2rem}
+h1{font-size:1.75rem;font-weight:800;color:#0a1628;margin:0 0 .5rem}
+.subtitle{color:#6b7280;font-size:.9375rem;margin:0 0 2rem}
+h2{font-size:1.125rem;font-weight:700;color:#0a1628;margin:1.75rem 0 .5rem}
+p{margin:0 0 .75rem;color:#374151}
+ul{color:#374151;margin:0 0 1rem;padding-left:1.5rem}
+li{margin-bottom:.25rem}
+footer{padding:2rem 0;font-size:.8125rem;color:#6b7280;border-top:1px solid #e5e7eb;background:#fff}
+footer a{color:#374151;text-decoration:none;margin-right:1rem}
+.notice{background:#fef3c7;border:1px solid #fde68a;border-radius:6px;padding:.875rem 1rem;font-size:.875rem;color:#78350f;margin:1rem 0}
 </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="topnav">
-            <a class="wordmark" href="/">Xenia</a>
-            <a class="pagelink" href="/">&larr; Home</a>
-        </nav>
+<header>
+<div class="container">
+<a href="/" style="text-decoration:none;color:inherit"><div class="logo"><span class="logo-mark"></span>Xenia</div></a>
+<nav>
+<a href="/">Home</a>
+<a href="/methodology">Methodology</a>
+<a href="/#partnership">Partnerships</a>
+</nav>
+</div>
+</header>
 
-        <main>
-<h1>Xenia Terms of Service (v1)</h1>
-<p><strong>Page URL:</strong> <code>https://xeniadata.com/terms</code>
-<strong>Page version:</strong> v1 (Day 1 draft, 2026-05-13)
-<strong>Effective date:</strong> Upon Scope A internal MVP launch (target: 2026-05-19)
-<strong>Audience:</strong> Internal users (Scope A), partner properties (Scope B onward), commercial users (Scope C onward)
-<strong>Governing law:</strong> State of California, United States</p>
-<hr />
+<div class="container">
+<div class="crumb"><a href="/">Xenia</a> / Terms of Service</div>
+<main><div class="inner">
+
+<h1>Terms of Service</h1>
+<p class="subtitle">Effective: May 29, 2026 · Last updated: May 2026</p>
+
+<div class="notice"><strong>Draft pending legal review.</strong> These terms govern use of the Xenia public Site as of launch. A revised version with full counsel sign-off will replace this document. Material changes will be announced.</div>
+
 <h2>1. Acceptance</h2>
-<p>These Terms of Service ("Terms") govern your access to and use of Xenia (xeniadata.com, internal.xeniadata.com, and any sub-properties, services, APIs, or features made available under the "Xenia" name, collectively the "Service"). The Service is operated by Xenia Data  ("Xenia," "we," "us," or "our"), with its principal place of business at 4438 Ingraham St, PMB 216, San Diego, CA 92109.</p>
-<p>By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, you may not access or use the Service.</p>
-<p>If you are accessing the Service on behalf of an organization, you represent that you have the authority to bind that organization to these Terms, in which case "you" refers to that organization.</p>
-<h2>2. What Xenia is</h2>
-<p>Xenia is a hotel data aggregator. Xenia collects, organizes, validates, and displays factual information about hotel and lodging properties. Xenia produces three kinds of information:</p>
-<ol>
-<li><strong>Verified facts (Tier 1).</strong> Objective attributes cross-validated across multiple lawful sources or licensed feeds.</li>
-<li><strong>Self-reported attributes (Tier 2).</strong> Claims made by property owners about their own properties, attributed to the property.</li>
-<li><strong>Xenia-derived insights (Tier 3).</strong> Inferences produced by Xenia's analytical systems from lawful inputs, accompanied by methodology disclosure.</li>
-</ol>
-<p>Xenia is NOT a re-publisher of third-party reviews, descriptions, or photographs. Where the Service displays content sourced from a third party, it is displayed under the <em>Authors Guild v. Google</em> / <em>Perfect 10 v. Amazon.com</em> snippet-and-link model, not as a full-text mirror.</p>
-<h2>3. Eligibility</h2>
-<p>You must be at least 18 years old to access the Service. If you are under 18, you may not access or use the Service. By accessing the Service, you represent that you are at least 18.</p>
-<p>You may not access the Service if you are barred from receiving services under the laws of the jurisdiction in which you are accessing the Service.</p>
-<h2>4. Account registration (Scope A internal users; Scope B partner properties; Scope C commercial users)</h2>
-<p>To access certain features, you may be required to register an account. You agree to provide accurate, current, and complete information during registration and to keep your account information current. You are responsible for maintaining the confidentiality of your account credentials.</p>
-<p>You may not share your account credentials with others or allow others to access the Service through your account except in accordance with our authorized-user provisions for partner organizations.</p>
-<h2>5. Acceptable use</h2>
-<p>You agree NOT to:</p>
-<ul>
-<li>Use the Service to violate any law or regulation</li>
-<li>Attempt to access content not made available to you</li>
-<li>Use the Service to harvest or scrape data in violation of our crawler policy (see <a href="https://xeniadata.com/crawler">https://xeniadata.com/crawler</a>)</li>
-<li>Reverse-engineer, decompile, or attempt to extract the source code of any portion of the Service</li>
-<li>Use the Service to send unsolicited communications</li>
-<li>Misrepresent yourself or your affiliation with a property</li>
-<li>Submit false, misleading, or fraudulent information through any submission interface (including the property owner onboarding portal)</li>
-<li>Use Xenia's content to train any third-party AI system without express written license from Xenia</li>
-<li>Use Xenia data to populate any commercial database that competes with Xenia's commercial offering</li>
-</ul>
-<h2>6. Content you submit</h2>
-<p>If you submit content to the Service — including but not limited to property attestations, reviews of properties at which you stayed, photographs of properties you own or manage, or dispute submissions — you represent and warrant that:</p>
-<ol>
-<li>You own or have all necessary rights to the content you submit</li>
-<li>The content does not infringe any third party's rights</li>
-<li>The content is accurate and not misleading</li>
-<li>You consent to Xenia's display, processing, analysis, and use of the content as set forth in these Terms</li>
-</ol>
-<h3>6.1 Submitter license grant (CRITICAL — material to Section 11 compliance)</h3>
-<p>By submitting content to the Service, you grant Xenia a worldwide, royalty-free, non-exclusive, perpetual, irrevocable, sublicensable license to:</p>
-<ul>
-<li>Host, store, reproduce, display, distribute, modify, create derivative works of, and otherwise use the content in connection with the Service</li>
-<li>Use the content as an input to Xenia's analytical systems, including any present or future AI inference systems</li>
-<li>Use the content for the development, training, fine-tuning, evaluation, or operation of Xenia's classifiers, scorers, and analytical models</li>
-<li>Display the content (or derivatives thereof) to other users of the Service</li>
-<li>Aggregate the content into statistics and derived insights</li>
-<li>Sublicense the content to Xenia's service providers, contractors, and partners as necessary for Service operation</li>
-</ul>
-<p>This license grant is <strong>explicit and material</strong> to Xenia's compliance with Section 11.2 of its Legal Framework (lawful acquisition of training data). You may revoke this license at any time by deleting your submission and notifying Xenia in writing; revocation applies prospectively only and does not affect derivative works already created.</p>
-<h3>6.2 Reviews submitted by guests</h3>
-<p>If you submit a review of a property where you stayed, you additionally represent:</p>
-<ul>
-<li>You actually stayed at the property</li>
-<li>The review reflects your honest experience</li>
-<li>You have not been paid, incentivized, or required to submit the review in any specific tone</li>
-</ul>
-<p>Xenia complies with the FTC Consumer Review and Testimonials Rule, 16 CFR Part 465. We do not generate or display fake reviews. We do not suppress lawful negative reviews. We may verify your stay through booking-confirmation cross-checks with the property's PMS (e.g., Cloudbeds) before publishing your review.</p>
-<h3>6.3 Property attestations by owners</h3>
-<p>If you submit content as a property owner attesting to attributes of your property (room count, amenities, policies, etc.):</p>
-<ul>
-<li>You represent that you own or have authority to act on behalf of the property</li>
-<li>You represent that the attestations are accurate as of the date of submission</li>
-<li>You agree to update the attestations within 30 days of any material change</li>
-<li>You acknowledge that Xenia may display the attestations as "the property describes itself as..." with full attribution</li>
-</ul>
-<h2>7. Content Xenia provides</h2>
-<h3>7.1 No warranty of accuracy</h3>
-<p>Xenia provides information about properties on a best-effort basis. While Xenia's compliance framework requires cross-validation, methodology disclosure, and right-to-respond mechanisms, <strong>Xenia makes no warranty that any specific item of information is accurate, current, or complete</strong>. You should not rely on Xenia as the sole source for booking, travel, accessibility, or safety decisions. Xenia's insights are decision-supporting tools, not authoritative substitutes for direct verification with the property.</p>
-<h3>7.2 Tier 1 / Tier 2 / Tier 3 distinction</h3>
-<p>When you access information on the Service, you will see one of three classifications:</p>
-<ul>
-<li><strong>Verified Fact (Tier 1).</strong> Cross-validated; displayed without attribution as a factual statement.</li>
-<li><strong>Self-Reported (Tier 2).</strong> The property's own claim; displayed with explicit attribution to the property.</li>
-<li><strong>Xenia Insight (Tier 3).</strong> Derived inference; displayed with methodology disclosure and a confidence score.</li>
-</ul>
-<p>Always check the tier label before relying on a specific data point.</p>
-<h3>7.3 Sensitive attributes</h3>
-<p>For attributes Xenia classifies as sensitive (LGBTQ+ accommodation, accessibility, family-safety, religious accommodation, cultural-affinity, safety inferences, health/wellness claims with medical implications):</p>
-<ul>
-<li>Elevated validation standards apply (Xenia Legal Framework v1.2 Section 6.2)</li>
-<li>Negative sensitive inferences are <strong>never</strong> published by Xenia regardless of signal strength (Section 6.3)</li>
-<li>The right-to-respond mechanism applies with priority handling</li>
-</ul>
-<p>If you require absolute confirmation of a sensitive attribute (e.g., wheelchair accessibility, kosher kitchen) for booking purposes, contact the property directly. Xenia attestations are informational, not warranties.</p>
-<h2>8. Intellectual property</h2>
-<h3>8.1 Xenia's content</h3>
-<p>The Service, including the Xenia schema, the field classification system, the methodology framework, the display language library, the original photographs and editorial content Xenia produces, the codebase, and the brand assets, are owned by Xenia Data and protected by U.S. and international copyright, trademark, and other intellectual property laws.</p>
-<p>Xenia's three-tier classification architecture (Tier 1 / Tier 2 / Tier 3), the Section 12.4 Display Language Library, and the Xenia Legal Framework are creative selection/arrangement work product of Xenia Data.</p>
-<h3>8.2 Permitted user uses</h3>
-<p>You may:</p>
-<ul>
-<li>View, read, and use the Service for personal, non-commercial purposes</li>
-<li>Quote short excerpts of Xenia content with attribution to Xenia (Tier 1 facts, by their nature, are not copyrightable per <em>Feist</em>; but Xenia's selection and arrangement is)</li>
-<li>Embed links to Xenia property pages on personal websites, social media, and similar non-commercial contexts</li>
-</ul>
-<h3>8.3 Prohibited user uses</h3>
-<p>You may not, without Xenia's express written license:</p>
-<ul>
-<li>Reproduce, redistribute, or republish substantial portions of the Service</li>
-<li>Use Xenia content to train AI models for any party other than Xenia</li>
-<li>Copy Xenia's schema, classification system, or methodology framework into a competing database</li>
-<li>Use Xenia's marks, logos, or brand assets in any manner that suggests Xenia endorses you, your product, or your service</li>
-<li>Scrape, harvest, or extract data from the Service through any automated means except through the Xenia public crawler-information page and only as permitted there</li>
-</ul>
-<h3>8.4 Xenia's use of third-party content</h3>
-<p>Where the Service displays content sourced from third parties, Xenia does so under the <em>Authors Guild v. Google</em> / <em>Perfect 10 v. Amazon.com</em> / <em>Field v. Google</em> fair-use snippet-and-link framework or under express license. Third-party copyright holders may submit DMCA notices via <a href="https://xeniadata.com/dmca">https://xeniadata.com/dmca</a>.</p>
-<h2>9. AI-generated content disclosure</h2>
-<p>Some content displayed on the Service is generated by Xenia's analytical systems. This includes Xenia-derived insights (Tier 3), property summaries, sentiment scores, and similar analytical outputs. Such content is clearly labeled with the Xenia Insight indicator and accompanied by methodology disclosure.</p>
-<p>Xenia complies with California Assembly Bill 2013 (Generative AI Training Data Transparency Act, effective January 1, 2026). Xenia's training-data summary is published at <a href="https://xeniadata.com/methodology">https://xeniadata.com/methodology</a> Section 6.</p>
-<h2>10. Privacy</h2>
-<p>Xenia's collection and use of personal information is governed by the <a href="https://xeniadata.com/privacy">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the Service, you agree to the Privacy Policy.</p>
-<p>For users in California, your rights under the California Consumer Privacy Act and California Privacy Rights Act are described in the Privacy Policy.</p>
-<h2>11. Termination</h2>
-<p>Xenia may suspend or terminate your access to the Service, in whole or in part, at any time, with or without cause and with or without notice. You may stop using the Service at any time.</p>
-<p>Termination of access does not terminate any license grant you have provided under Section 6.1 with respect to content already incorporated into Xenia's analytical systems, except as described in Section 6.1.</p>
-<h2>12. Disclaimer of warranties</h2>
-<p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. XENIA DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT INFORMATION ON THE SERVICE WILL BE ACCURATE, CURRENT, OR COMPLETE.</p>
-<h2>13. Limitation of liability</h2>
-<p>TO THE FULLEST EXTENT PERMITTED BY LAW, XENIA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR USE OF THE SERVICE, WHETHER OR NOT XENIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-<p>XENIA'S AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO YOUR USE OF THE SERVICE SHALL NOT EXCEED THE GREATER OF (A) ONE HUNDRED U.S. DOLLARS ($100), OR (B) THE AMOUNT YOU HAVE PAID TO XENIA IN THE TWELVE MONTHS PRECEDING THE CLAIM.</p>
-<p>CERTAIN JURISDICTIONS DO NOT PERMIT THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OF LIABILITY FOR CERTAIN DAMAGES; THE FOREGOING LIMITATIONS APPLY ONLY TO THE EXTENT PERMITTED BY APPLICABLE LAW.</p>
-<h2>14. Indemnification</h2>
-<p>You agree to indemnify and hold harmless Xenia and its officers, directors, employees, and agents from any claims, damages, liabilities, costs, or expenses (including reasonable attorneys' fees) arising out of (a) your use of the Service in violation of these Terms, (b) content you submit to the Service, or (c) your violation of any law or third-party rights.</p>
-<h2>15. Governing law and dispute resolution</h2>
-<p>These Terms are governed by the laws of the State of California, without regard to its conflict of laws principles. Any dispute arising out of or relating to these Terms or the Service shall be resolved in the state or federal courts located in San Diego County, California. You consent to personal jurisdiction and venue in those courts.</p>
-<p>Nothing in this section prevents either party from seeking injunctive or equitable relief in any court of competent jurisdiction to protect its intellectual property rights.</p>
-<p>If you are a consumer accessing the Service from outside California, certain consumer-protection laws of your jurisdiction may apply notwithstanding this section.</p>
-<h2>16. Changes to these Terms</h2>
-<p>Xenia may update these Terms from time to time. Material changes will be announced on the Service at least 30 days in advance of taking effect, except where changes are required by law or to address an active security or compliance concern. Your continued use of the Service after the effective date of a change constitutes your acceptance of the change.</p>
-<h2>17. Miscellaneous</h2>
-<ul>
-<li><strong>Entire agreement.</strong> These Terms and the Privacy Policy constitute the entire agreement between you and Xenia regarding the Service.</li>
-<li><strong>Severability.</strong> If any provision is held unenforceable, the remaining provisions shall continue in full force and effect.</li>
-<li><strong>No waiver.</strong> Xenia's failure to enforce any provision shall not constitute a waiver of that provision.</li>
-<li><strong>Assignment.</strong> You may not assign these Terms; Xenia may assign these Terms in connection with a merger, acquisition, or sale of assets.</li>
-<li><strong>Notices.</strong> Notices to Xenia must be sent to <a href="mailto:legal@xeniadata.com">legal@xeniadata.com</a> with a copy to the mailing address in Section 1.</li>
-</ul>
-<h2>18. Contact</h2>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Email</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>General inquiries</td>
-<td><a href="mailto:hello@xeniadata.com">hello@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Terms questions</td>
-<td><a href="mailto:legal@xeniadata.com">legal@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Privacy questions</td>
-<td><a href="mailto:privacy@xeniadata.com">privacy@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Property owner inquiries</td>
-<td><a href="mailto:property@xeniadata.com">property@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>DMCA notices</td>
-<td><a href="mailto:dmca@xeniadata.com">dmca@xeniadata.com</a></td>
-</tr>
-<tr>
-<td>Crawler / opt-out</td>
-<td><a href="mailto:crawler@xeniadata.com">crawler@xeniadata.com</a></td>
-</tr>
-</tbody>
-</table>
-<h2>Last updated</h2>
-<p>2026-05-13. Version 1 (Day 1 draft). This document has not yet been reviewed by a California-licensed attorney. Counsel review is scheduled before Scope C commercial launch.
-            </p>
-        </main>
+<p>By accessing or using xeniadata.com (the "Site"), you agree to these Terms of Service. If you do not agree, do not use the Site.</p>
 
-        <footer>
-            <div>&copy; 2026 Xenia Data. All rights reserved.</div>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/methodology/">Methodology</a>
-                <a href="/privacy/">Privacy</a>
-                <a href="/terms/">Terms</a>
-                <a href="/dmca/">DMCA</a>
-                <a href="/crawler/">Crawler</a>
-            </nav>
-        </footer>
-    </div>
+<h2>2. About Xenia</h2>
+<p>Xenia is a structured hotel data product operated by Xenia, Inc., a Delaware corporation ("we," "us," or "our"). The Site is the public marketing presence for Xenia.</p>
+
+<h2>3. Use of the public Site</h2>
+<p>You may browse and read content on the Site for any lawful purpose. You may not: (a) crawl the Site outside the bounds of our robots.txt; (b) attempt to access non-public areas of our infrastructure; (c) misrepresent yourself in inquiry forms; (d) use the Site to harass or defame any party.</p>
+
+<h2>4. Partnership access</h2>
+<p>Access to Xenia's hotel data is offered separately under a partnership agreement and is not granted by these Terms. Data access requires a separate signed agreement specifying scope, permitted use, confidentiality, and licensing terms. Use of any partner-provided credentials is governed by the partnership agreement, not these Terms.</p>
+
+<h2>5. Intellectual property</h2>
+<p>The Site, the Xenia name and logo, the Xenia data methodology, and the Xenia source registry are owned by Xenia, Inc. or its licensors. Nothing in these Terms grants you a license to use any of the foregoing except as expressly authorized.</p>
+
+<h2>6. Hotel listings</h2>
+<p>If you are a hotel operator and your property is listed in our data product, you may at any time request to claim, correct, supplement, or remove your listing by contacting <a href="mailto:hotels@xeniadata.com">hotels@xeniadata.com</a>. We will verify authority and respond within 5 business days for corrections and 30 days for delisting requests.</p>
+
+<h2>7. Confidentiality of methodology</h2>
+<p>Our complete data methodology, source registry, classification rules, and scoring system are confidential and proprietary. We share these only under written non-disclosure agreement. If you receive any confidential methodology materials, you are bound by the terms of the NDA you signed.</p>
+
+<h2>8. Disclaimer of warranties</h2>
+<p>The Site and any pre-release demonstrations are provided "as is" and "as available" without warranty of any kind, express or implied. We do not warrant accuracy, completeness, fitness for purpose, or non-infringement except as specifically set forth in a separate partnership agreement.</p>
+
+<h2>9. Limitation of liability</h2>
+<p>To the maximum extent permitted by law, Xenia, Inc. is not liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Site.</p>
+
+<h2>10. Governing law</h2>
+<p>These Terms are governed by the laws of the State of Delaware, without regard to its conflict-of-laws principles. Disputes shall be brought in the state or federal courts located in Delaware.</p>
+
+<h2>11. Changes to these Terms</h2>
+<p>We may update these Terms. Material changes will be reflected here with a revised "Last updated" date.</p>
+
+<h2>12. Contact</h2>
+<p>Legal inquiries: <a href="mailto:legal@xeniadata.com">legal@xeniadata.com</a></p>
+<p>Xenia, Inc., 4438 Ingraham St, PMB 216, San Diego, CA 92109</p>
+
+</div></main>
+</div>
+
+<footer>
+<div class="container">
+<p style="font-weight:600;color:#0a1628;margin-bottom:.5rem">© 2026 Xenia, Inc.</p>
+<p><a href="/methodology">Methodology</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/dmca">DMCA</a><a href="mailto:partnerships@xeniadata.com">Partnerships</a></p>
+</div>
+</footer>
 </body>
 </html>
